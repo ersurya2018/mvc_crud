@@ -1,0 +1,15 @@
+﻿@model crudsurya2.Models.Suryamodel
+<h1>Register Here</h1>
+@using (Html.BeginForm("About", "Home", FormMethod.Post))
+{
+    <label>Name</label>
+    @Html.TextBoxFor(m=>m.name, new { @class = "form-control", @required = "required" })
+    <label>Email</label>
+    @Html.TextBoxFor(m=>m.email, new { @class = "form-control", @required = "required" })
+    <label>Mobile</label>
+    @Html.TextBoxFor(m => m.mobile, new { @class = "form-control", @required = "required" })
+    <label>Password</label>
+    @Html.PasswordFor(m => m.password, new { @class = "form-control", @required = "required" })
+    <br />
+    <button type="submit" class="btn btn-success">Submit</button>
+}
